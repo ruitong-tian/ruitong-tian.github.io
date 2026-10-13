@@ -14,7 +14,7 @@ if (publicationLink && 'IntersectionObserver' in window) {
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 if ('IntersectionObserver' in window && !reducedMotion.matches) {
-  const items = [...document.querySelectorAll('.research > h2, .paper, .source-note, .contact, footer')];
+  const items = [...document.querySelectorAll('.research > h2, .paper, .contact, footer')];
   const reveal = element => {
     element.classList.remove('reveal-pending');
     revealObserver.unobserve(element);
